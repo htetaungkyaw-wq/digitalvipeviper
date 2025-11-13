@@ -1,4 +1,14 @@
 import { defineConfig } from 'vite';
+
+export default defineConfig({
+  resolve: {
+    alias: {
+      '@': '/src'
+    }
+  },
+  esbuild: {
+    jsx: 'automatic'
+  },
 import react from '@vitejs/plugin-react';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
