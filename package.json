@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build": "tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -17,6 +18,13 @@
     "recharts": "^2.12.7"
   },
   "devDependencies": {
+    "recharts": "^2.12.7",
+    "@radix-ui/react-slot": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.8",
+    "@types/react-dom": "^18.3.3",
+    "@vitejs/plugin-react": "^4.3.2",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
@@ -24,5 +32,7 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.6.2",
     "vite": "^5.4.11"
+    "vite": "^5.4.11",
+    "@types/node": "^22.9.0"
   }
 }
