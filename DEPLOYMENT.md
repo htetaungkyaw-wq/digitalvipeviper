@@ -27,7 +27,7 @@ The generated production assets will be output to `dist/`.
    ```
    dist
    ```
-4. The deployment will automatically use the configuration from `wrangler.toml`, including the `pages_build_output_dir` and compatibility date.
+4. The deployment will automatically use the configuration from `wrangler.toml`, including the `pages_build_output_dir` and compatibility date. Cloudflare Pages now ignores any `[build]` block in `wrangler.toml`, so set the build command inside the Pages dashboard (or your CI provider) instead of the config file.
 
 ## 4. Optional: Deploy via Wrangler CLI
 
@@ -37,7 +37,7 @@ You can also deploy directly from your terminal using Wrangler:
 npx wrangler pages deploy dist
 ```
 
-(Ensure you have built the project first.)
+Because Wrangler no longer accepts a `[build]` section for Pages projects, make sure you run `npm run build` beforehand so that the `dist/` directory already exists.
 
 ## 5. Preview deployments
 
